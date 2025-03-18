@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  direction: rtl;
+  scroll-behavior: smooth;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+header.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1px;
+}
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.layer-back {
+  background-image: url('https://images.unsplash.com/photo-1594737625785-c902c9a5c30b?fit=crop&w=1950&q=80');
+  transform: translateZ(-2px) scale(3);
+}
+.layer-mid {
+  background-image: url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?fit=crop&w=1950&q=80');
+  transform: translateZ(-1px) scale(2);
+  opacity: 0.6;
+}
+.layer-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.btn-cta {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 75, 43, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 75, 43, 0.6);
+}
+
+.features-section {
+  padding: 100px 20px;
+  background: #121212;
+  text-align: center;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 300px;
+  transition: all 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.download-guides {
+  padding: 100px 20px;
+  background: #181818;
+  text-align: center;
+}
+.glass-form {
+  margin: auto;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  backdrop-filter: blur(8px);
+}
+.glass-form input, .glass-form button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+}
+.glass-form input {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.glass-form button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.glass-form button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #000;
+  color: #888;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
